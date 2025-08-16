@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import CosmicMaquiPayCard from './ui/cosmic-card';
 
 
 function ElegantShape({
