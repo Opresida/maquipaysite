@@ -1,5 +1,6 @@
 import { Zap, DollarSign, Headset } from 'lucide-react';
 import { motion } from 'framer-motion';
+import CosmicMaquiPayCard from './ui/cosmic-card';
 
 const benefits = [
   {
@@ -66,12 +67,8 @@ const Benefits = () => {
               </motion.div>
             ))}
           </motion.div>
-          <div className="relative h-96 lg:h-auto">
-            <img 
-              src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="Equipe de negócios colaborando" 
-              className="rounded-xl shadow-2xl object-cover w-full h-full"
-            />
+          <div className="relative h-96 lg:h-auto flex items-center justify-center">
+            <CosmicMaquiPayCard />
           </div>
         </div>
       </div>
