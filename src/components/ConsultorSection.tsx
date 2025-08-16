@@ -31,9 +31,26 @@ const ConsultorSection = () => {
   return (
     <section className="py-20 sm:py-28 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="flex flex-col space-y-12">
           <motion.div 
-            className="space-y-8"
+            className="relative flex items-center justify-center"
+            variants={fadeUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="relative">
+              <img 
+                src="https://i.imgur.com/y3kM3tB.png" 
+                alt="Consultor MaquiPAY" 
+                className="rounded-xl shadow-2xl max-w-full h-auto"
+              />
+              <div className="absolute -inset-4 bg-gradient-primary/20 rounded-xl blur-xl opacity-50"></div>
+            </div>
+          </motion.div>
+          
+          <motion.div 
+            className="text-center space-y-8"
             variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
@@ -43,12 +60,12 @@ const ConsultorSection = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
                 Torne-se um <span className="bg-gradient-primary text-transparent bg-clip-text">Consultor MaquiPAY</span> e fique com até 60% do lucro de cada cliente
               </h2>
-              <p className="text-lg text-text-secondary mb-8">
+              <p className="text-lg text-text-secondary mb-8 max-w-3xl mx-auto">
                 Seja parte da nossa rede de parceiros e construa uma fonte de renda recorrente ajudando empresários a crescer.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 custom={0}
                 variants={buttonVariants}
@@ -74,23 +91,6 @@ const ConsultorSection = () => {
                 Para Contadores
                 <div className="absolute inset-0 bg-gradient-primary/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
               </motion.button>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="relative flex items-center justify-center"
-            variants={fadeUpVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <div className="relative">
-              <img 
-                src="https://i.imgur.com/y3kM3tB.png" 
-                alt="Consultor MaquiPAY" 
-                className="rounded-xl shadow-2xl max-w-full h-auto"
-              />
-              <div className="absolute -inset-4 bg-gradient-primary/20 rounded-xl blur-xl opacity-50"></div>
             </div>
           </motion.div>
         </div>
