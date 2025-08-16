@@ -19,9 +19,9 @@ function App() {
         <Hero />
         <Logos />
         <Solutions />
+        <ConsultorSection />
         <TargetAudience />
         <Benefits />
-        <ConsultorSection />
         <Testimonials />
         <FinalCTA />
       </main>
