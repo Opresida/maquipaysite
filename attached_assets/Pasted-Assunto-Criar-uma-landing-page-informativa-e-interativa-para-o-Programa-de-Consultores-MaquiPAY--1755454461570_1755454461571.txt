@@ -1,0 +1,111 @@
+Assunto: Criar uma landing page informativa e interativa para o "Programa de Consultores MaquiPAY".
+
+Prompt:
+
+Olá! Por favor, crie uma nova página web completa para o "Programa de Consultores MaquiPAY". A página deve ser construída como um componente React (ConsultantsPage.tsx), utilizando a estrutura da shadcn/ui e Tailwind CSS.
+
+O objetivo é apresentar a oportunidade de parceria de forma clara, profissional e convidativa, além de incluir uma calculadora de comissão interativa.
+
+Estrutura da Página:
+
+A página deve ser dividida em 5 seções principais:
+
+1. Seção de Herói (Topo):
+
+Título Principal: "Seja um Consultor MaquiPAY e Transforme o Futuro dos Pagamentos."
+
+Subtítulo: "Uma parceria lucrativa com comissões agressivas, plano de carreira e o suporte da solução de pagamentos que mais cresce no mercado."
+
+Visual: Utilizar o modelo 3D da maquininha MaquiPAY (se possível, como um elemento flutuante e animado) ao lado do texto.
+
+Call-to-Action (CTA): Um botão grande e destacado com o texto "Quero ser Consultor".
+
+2. Seção "Como Funciona a Parceria":
+
+Título: "Uma Parceria Transparente e Vantajosa"
+
+Conteúdo: Apresentar o modelo de negócio em 3 passos simples, usando ícones e texto curto:
+
+Cadastro: "Você se cadastra como revendedor (Pessoa Jurídica)."
+
+Indicação: "Você indica a MaquiPAY para seus clientes."
+
+Comissão: "Você recebe uma comissão sobre o lucro gerado por cada cliente."
+
+Exemplo de Cálculo: Mostrar um exemplo claro e simplificado:
+
+"Seu cliente transacionou: R$ 100.000"
+
+"Lucro Bruto MaquiPAY (ex: 2%): R$ 2.000"
+
+"Sua Comissão Inicial (30%): R$ 600"
+
+Nota: Mencionar que este é um exemplo e que os custos operacionais são deduzidos.
+
+3. Seção "Calculadora de Comissão Interativa":
+
+Título: "Simule Seus Ganhos"
+
+Funcionalidade: Criar um simulador interativo onde o usuário pode:
+
+Inserir o faturamento mensal total de um cliente (usando um slider ou campo de input).
+
+Inserir a distribuição percentual entre Débito e Crédito à Vista (ex: 30% débito, 70% crédito).
+
+A calculadora deve exibir dinamicamente a comissão estimada do consultor.
+
+Lógica de Cálculo (para o código):
+
+Taxa Débito (D+1): 1.15% (Custo para MaquiPAY: 0.5%) -> Lucro: 0.65%
+
+Taxa Crédito à Vista (D+1): 3.25% (Custo para MaquiPAY: 0.75%) -> Lucro: 2.5%
+
+lucroTotal = (faturamento * pctDebito * 0.0065) + (faturamento * pctCredito * 0.025)
+
+comissaoEstimada = lucroTotal * 0.30 (comissão inicial de 30%)
+
+Design: A calculadora deve ser visualmente atraente, com gráficos ou barras que se atualizam em tempo real.
+
+4. Seção "Plano de Carreira":
+
+Título: "Cresça com a MaquiPAY"
+
+Conteúdo: Apresentar o plano de carreira em formato de linha do tempo ou cards progressivos:
+
+Consultor Inicial: 30% de comissão.
+
+Consultor Prata: Atingindo R$ 400k em faturamento total da carteira -> 40% de comissão.
+
+Consultor Ouro: Atingindo R$ 700k -> 50% de comissão.
+
+Consultor Diamante: Atingindo R$ 3M -> 60% de comissão.
+
+5. Seção de Cadastro (Formulário):
+
+Título: "Faça Parte do Nosso Time"
+
+Formulário: Um formulário de cadastro simples (usando componentes da shadcn/ui) solicitando:
+
+Nome Completo
+
+Email
+
+Telefone
+
+CNPJ
+
+Breve mensagem (opcional)
+
+Botão de Envio: "Enviar Cadastro".
+
+Requisitos de Design:
+
+Paleta de Cores: Manter a identidade visual da MaquiPAY (fundo escuro, com detalhes em magenta #E5007E e roxo #6D28D9).
+
+Tipografia: Usar a fonte "Inter".
+
+Componentes: Utilizar os componentes da biblioteca shadcn/ui para botões, inputs, cards, etc., para garantir consistência visual.
+
+Responsividade: A página deve ser totalmente responsiva e funcionar perfeitamente em dispositivos móveis.
+
+Por favor, gere o código completo para o componente ConsultantsPage.tsx.
