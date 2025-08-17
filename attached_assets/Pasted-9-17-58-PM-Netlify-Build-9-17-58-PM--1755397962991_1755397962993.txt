@@ -1,0 +1,50 @@
+9:17:58 PM: Netlify Build                                                 
+9:17:58 PM: ────────────────────────────────────────────────────────────────
+9:17:58 PM: ​
+9:17:58 PM: ❯ Version
+9:17:58 PM:   @netlify/build 35.1.0
+9:17:58 PM: ​
+9:17:58 PM: ❯ Flags
+9:17:58 PM:   accountId: 688adc2301e5d5e950a9e88a
+9:17:58 PM:   baseRelDir: true
+9:17:58 PM:   buildId: 68a12db5677e9d946db97d37
+9:17:58 PM:   deployId: 68a12db5677e9d946db97d39
+9:17:59 PM: ​
+9:17:59 PM: ❯ Current directory
+9:17:59 PM:   /opt/build/repo
+9:17:59 PM: ​
+9:17:59 PM: ❯ Config file
+9:17:59 PM:   No config file was defined: using default values.
+9:17:59 PM: ​
+9:17:59 PM: ❯ Context
+9:17:59 PM:   production
+9:17:59 PM: ​
+9:17:59 PM: Build command from Netlify app                                
+9:17:59 PM: ────────────────────────────────────────────────────────────────
+9:17:59 PM: ​
+9:17:59 PM: $ npm run build
+9:17:59 PM: > maquipay-landing@0.0.0 build
+9:17:59 PM: > tsc && vite build
+9:18:01 PM: src/components/Hero.tsx(6,1): error TS6133: 'CosmicMaquiPayCard' is declared but its value is never read.
+9:18:01 PM: src/components/ui/cosmic-card.tsx(20,10): error TS6133: 'mousePosition' is declared but its value is never read.
+9:18:01 PM: ​
+9:18:01 PM: "build.command" failed                                        
+9:18:01 PM: ────────────────────────────────────────────────────────────────
+9:18:01 PM: ​
+9:18:01 PM:   Error message
+9:18:01 PM:   Command failed with exit code 2: npm run build (https://ntl.fyi/exit-code-2)
+9:18:01 PM: ​
+9:18:01 PM:   Error location
+9:18:01 PM:   In Build command from Netlify app:
+9:18:01 PM:   npm run build
+9:18:01 PM: ​
+9:18:01 PM:   Resolved config
+9:18:01 PM:   build:
+9:18:01 PM:     command: npm run build
+9:18:01 PM:     commandOrigin: ui
+9:18:01 PM:     publish: /opt/build/repo/dist
+9:18:01 PM:     publishOrigin: ui
+9:18:01 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+9:18:02 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+9:18:02 PM: Failing build: Failed to build site
+9:18:02 PM: Finished processing build request in 12.594s
