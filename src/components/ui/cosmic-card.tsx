@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -17,7 +16,6 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
   height = "280px",
   width = "450px",
 }) => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovered, setIsHovered] = useState(false)
   const [time, setTime] = useState(0)
   const cardRef = useRef<HTMLDivElement>(null)
@@ -41,8 +39,8 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
     if (Math.abs(rotationRef.current.z) > 5) rotationSpeedRef.current.z *= -1
 
     cardRef.current.style.transform = `
-      rotateX(${rotationRef.current.x}deg) 
-      rotateY(${rotationRef.current.y}deg) 
+      rotateX(${rotationRef.current.x}deg)
+      rotateY(${rotationRef.current.y}deg)
       rotateZ(${rotationRef.current.z}deg)
     `
 
@@ -69,8 +67,6 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
       // Calculate the angle between mouse and card center
       const angleX = ((e.clientY - centerY) / (rect.height / 2)) * 50
       const angleY = (-(e.clientX - centerX) / (rect.width / 2)) * 50
-
-      setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top })
 
       // Apply the rotation directly for smoother movement
       if (card) {
@@ -240,19 +236,19 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
           50% { background-position: 100% 100%; }
           100% { background-position: 0% 0%; }
         }
-        
+
         @keyframes pulse-glow {
           0% { filter: blur(5px) brightness(1); }
           50% { filter: blur(7px) brightness(1.3); }
           100% { filter: blur(5px) brightness(1); }
         }
-        
+
         .stars-small, .stars-medium, .stars-large, .stars-twinkle {
           position: absolute;
           width: 100%;
           height: 100%;
         }
-        
+
         .stars-small {
           background-image: radial-gradient(1px 1px at 20px 30px, white, rgba(0,0,0,0)),
                           radial-gradient(1px 1px at 40px 70px, white, rgba(0,0,0,0)),
@@ -263,7 +259,7 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
           background-size: 200px 200px;
           opacity: 0.4;
         }
-        
+
         .stars-medium {
           background-image: radial-gradient(1.5px 1.5px at 150px 150px, white, rgba(0,0,0,0)),
                           radial-gradient(1.5px 1.5px at 220px 220px, white, rgba(0,0,0,0)),
@@ -272,7 +268,7 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
           background-size: 300px 300px;
           opacity: 0.4;
         }
-        
+
         .stars-large {
           background-image: radial-gradient(2px 2px at 100px 100px, white, rgba(0,0,0,0)),
                           radial-gradient(2px 2px at 200px 200px, white, rgba(0,0,0,0)),
@@ -295,7 +291,7 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
           position: absolute;
           width: 100%;
           height: 100%;
-          background-image: 
+          background-image:
             radial-gradient(1px 1px at 10% 10%, rgba(255,255,255,0.8), rgba(0,0,0,0)),
             radial-gradient(1px 1px at 15% 15%, rgba(229, 0, 126, 0.8), rgba(0,0,0,0)),
             radial-gradient(1px 1px at 20% 20%, rgba(151, 251, 0, 0.6), rgba(0,0,0,0)),
@@ -318,7 +314,7 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
           animation: particles-float 20s ease infinite;
           opacity: 0.6;
         }
-        
+
         @keyframes stars-move {
           0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
           100% { background-position: 400px 400px, 300px 300px, 200px 200px; }
@@ -335,15 +331,15 @@ const CosmicMaquiPayCard: React.FC<CosmicMaquiPayCardProps> = ({
           50% { background-position: 75% 75%; }
           100% { background-position: 0% 0%; }
         }
-        
+
         .animate-holographicShift {
           animation: holographicShift 5s ease infinite;
         }
-        
+
         .animate-pulse-glow {
           animation: pulse-glow 3s ease-in-out infinite;
         }
-        
+
         .perspective-3000 {
           perspective: 3000px;
         }
