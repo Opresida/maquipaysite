@@ -71,7 +71,7 @@ const TargetAudience = () => {
             <div className="lg:col-span-2 bg-background rounded-lg p-4 flex flex-col">
               <h4 className="text-lg font-semibold mb-4">Crescimento de Receita (Últimos 30 dias)</h4>
               <div className="flex-grow flex items-center justify-center">
-                  <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gráfico de crescimento de receita" className="w-full h-full object-cover rounded-md opacity-75" />
+                  <img src="https://i.imgur.com/z1rhCtw.png" alt="Gráfico de crescimento de receita" className="w-full h-full object-cover rounded-md opacity-75" />
               </div>
             </div>
             <div className="bg-background rounded-lg p-4 flex flex-col">
