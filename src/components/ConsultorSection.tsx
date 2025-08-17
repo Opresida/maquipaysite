@@ -73,6 +73,7 @@ const ConsultorSection = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="group relative overflow-hidden bg-gradient-primary text-white font-bold py-4 px-8 rounded-lg text-lg hover:scale-105 transform transition-all duration-300 flex items-center justify-center gap-3"
+                onClick={() => window.location.href = '/consultor'}
               >
                 <Users className="w-6 h-6" />
                 Para Consultores
