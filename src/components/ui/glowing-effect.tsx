@@ -78,7 +78,7 @@ const GlowingEffect = memo(
 
           const currentAngle =
             parseFloat(element.style.getPropertyValue("--start")) || 0;
-          let targetAngle =
+          const targetAngle =
             (180 * Math.atan2(mouseY - center[1], mouseX - center[0])) /
               Math.PI +
             90;
@@ -133,17 +133,8 @@ const GlowingEffect = memo(
         />
         <div
           ref={containerRef}
-          
-          className={cn(
-            "pointer-events-none absolute inset-0 rounded-[inherit] opacity-100 transition-opacity",
-            glow && "opacity-100",
-            // A linha do blur foi removida daqui para o efeito ficar só na borda
-            className,
-            disabled && "!hidden"
-          )}
-          style={{
-            position: 'relative',
-            ...({
+          style={
+            {
               "--blur": `${blur}px`,
               "--spread": spread,
               "--start": "0",
@@ -163,8 +154,15 @@ const GlowingEffect = memo(
                           #6D28D9 calc(50% / var(--repeating-conic-gradient-times)),
                           #E5007E calc(100% / var(--repeating-conic-gradient-times))
                         )`,
-            } as React.CSSProperties)
-          }}
+            } as React.CSSProperties
+          }
+          className={cn(
+            "pointer-events-none absolute inset-0 rounded-[inherit] opacity-100 transition-opacity",
+            glow && "opacity-100",
+            // A linha do blur foi removida daqui para o efeito ficar só na borda
+            className,
+            disabled && "!hidden"
+          )}
         >
           <div
             className={cn(

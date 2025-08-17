@@ -4,7 +4,6 @@ import Logos from './components/Logos';
 import Solutions from './components/Solutions';
 import TargetAudience from './components/TargetAudience';
 import Benefits from './components/Benefits';
-import ConsultorSection from './components/ConsultorSection';
 import Testimonials from './components/Testimonials';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
@@ -19,7 +18,6 @@ function App() {
         <Hero />
         <Logos />
         <Solutions />
-        <ConsultorSection />
         <TargetAudience />
         <Benefits />
         <Testimonials />
