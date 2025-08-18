@@ -287,7 +287,7 @@ whileInView="visible"
 
 viewport={{ once: true }}
 
-className="relative bg-background p-8 rounded-xl border border-secondary/20 text-center hover:border-primary/50 transition-all duration-300"
+className="relative bg-background p-8 rounded-xl border border-secondary/20 text-center transition-all duration-300"
 
 >
 
