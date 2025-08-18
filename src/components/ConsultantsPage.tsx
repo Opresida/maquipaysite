@@ -90,7 +90,7 @@ const ConsultantsPage = () => {
             >
               <div className="relative">
                 <img 
-                  src="https://i.imgur.com/y3kM3tB.png" 
+                  src="https://i.imgur.com/U4QLqcn.png" 
                   alt="Maquininha MaquiPAY" 
                   className="rounded-xl shadow-2xl max-w-full h-auto transform hover:rotate-2 transition-transform duration-500"
                 />
