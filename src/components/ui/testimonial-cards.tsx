@@ -11,7 +11,14 @@ export interface ConsultantTestimonial {
   avatar: string;
 }
 
-export function TestimonialCard({ handleShuffle, testimonial, position, id, author, avatar }: ConsultantTestimonial & { 
+export function TestimonialCard({ 
+  handleShuffle, 
+  testimonial, 
+  position, 
+  id, 
+  author, 
+  avatar 
+}: ConsultantTestimonial & { 
   handleShuffle: () => void;
   position: string;
 }) {
@@ -36,10 +43,10 @@ export function TestimonialCard({ handleShuffle, testimonial, position, id, auth
         right: 0,
         bottom: 0
       }}
-      onDragStart={(e) => {
+      onDragStart={(e: any) => {
         dragRef.current = e.clientX;
       }}
-      onDragEnd={(e) => {
+      onDragEnd={(e: any) => {
         if (dragRef.current - e.clientX > 150) {
           handleShuffle();
         }
@@ -64,11 +71,16 @@ export function TestimonialCard({ handleShuffle, testimonial, position, id, auth
 export function ShuffleCards({ testimonials }: { testimonials: ConsultantTestimonial[] }) {
   const [positions, setPositions] = React.useState(["front", "middle", "back"]);
 
-  const handleShuffle = () => {
-    const newPositions = [...positions];
-    newPositions.unshift(newPositions.pop());
-    setPositions(newPositions);
-  };
+  const handleShuffle = React.useCallback(() => {
+    setPositions(prevPositions => {
+      const newPositions = [...prevPositions];
+      const lastPosition = newPositions.pop();
+      if (lastPosition) {
+        newPositions.unshift(lastPosition);
+      }
+      return newPositions;
+    });
+  }, []);
 
   return (
     <div className="grid place-content-center overflow-hidden px-8 py-12 text-text-primary min-h-[500px] h-full w-full">
