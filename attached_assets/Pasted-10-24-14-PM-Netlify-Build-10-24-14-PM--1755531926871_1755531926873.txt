@@ -1,0 +1,50 @@
+10:24:14 PM: Netlify Build                                                 
+10:24:14 PM: ────────────────────────────────────────────────────────────────
+10:24:14 PM: ​
+10:24:14 PM: ❯ Version
+10:24:14 PM:   @netlify/build 35.1.0
+10:24:14 PM: ​
+10:24:14 PM: ❯ Flags
+10:24:14 PM:   accountId: 688adc2301e5d5e950a9e88a
+10:24:14 PM:   baseRelDir: true
+10:24:14 PM:   buildId: 68a28ebcce9f6c0009d04564
+10:24:14 PM:   deployId: 68a28ebcce9f6c0009d04566
+10:24:14 PM: ​
+10:24:14 PM: ❯ Current directory
+10:24:14 PM:   /opt/build/repo
+10:24:14 PM: ​
+10:24:14 PM: ❯ Config file
+10:24:14 PM:   No config file was defined: using default values.
+10:24:14 PM: ​
+10:24:14 PM: ❯ Context
+10:24:14 PM:   production
+10:24:14 PM: ​
+10:24:14 PM: Build command from Netlify app                                
+10:24:14 PM: ────────────────────────────────────────────────────────────────
+10:24:14 PM: ​
+10:24:14 PM: $ npm run build
+10:24:14 PM: > maquipay-landing@0.0.0 build
+10:24:14 PM: > tsc && vite build
+10:24:16 PM: src/components/ConsultantsPage.tsx(1010,8): error TS2322: Type '{ children: string; jsx: true; }' is not assignable to type 'DetailedHTMLProps<StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>'.
+10:24:16 PM:   Property 'jsx' does not exist on type 'DetailedHTMLProps<StyleHTMLAttributes<HTMLStyleElement>, HTMLStyleElement>'.
+10:24:16 PM: ​
+10:24:16 PM: "build.command" failed                                        
+10:24:16 PM: ────────────────────────────────────────────────────────────────
+10:24:16 PM: ​
+10:24:16 PM:   Error message
+10:24:16 PM:   Command failed with exit code 2: npm run build (https://ntl.fyi/exit-code-2)
+10:24:16 PM: ​
+10:24:16 PM:   Error location
+10:24:16 PM:   In Build command from Netlify app:
+10:24:16 PM:   npm run build
+10:24:16 PM: ​
+10:24:16 PM:   Resolved config
+10:24:16 PM:   build:
+10:24:16 PM:     command: npm run build
+10:24:16 PM:     commandOrigin: ui
+10:24:16 PM:     publish: /opt/build/repo/dist
+10:24:16 PM:     publishOrigin: ui
+10:24:17 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+10:24:17 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+10:24:17 PM: Failing build: Failed to build site
+10:24:17 PM: Finished processing build request in 13.257s
