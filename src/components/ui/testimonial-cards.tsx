@@ -52,17 +52,17 @@ export function TestimonialCard({
         dragRef.current = 0;
       }}
       transition={{ duration: 0.35 }}
-      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-primary/30 bg-surface/80 p-6 shadow-xl backdrop-blur-md ${
+      className={`absolute left-0 top-0 grid h-[400px] w-[280px] sm:h-[450px] sm:w-[350px] select-none place-content-center space-y-4 sm:space-y-6 rounded-2xl border-2 border-primary/30 bg-surface/80 p-4 sm:p-6 shadow-xl backdrop-blur-md ${
         isFront ? "cursor-grab active:cursor-grabbing" : ""
       }`}
     >
       <img
         src={avatar}
         alt={`Avatar de ${author}`}
-        className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-primary/50 bg-surface object-cover"
+        className="pointer-events-none mx-auto h-24 w-24 sm:h-32 sm:w-32 rounded-full border-2 border-primary/50 bg-surface object-cover"
       />
-      <span className="text-center text-lg italic text-text-secondary">"{testimonial}"</span>
-      <span className="text-center text-sm font-medium text-primary">{author}</span>
+      <span className="text-center text-sm sm:text-lg italic text-text-secondary leading-relaxed">"{testimonial}"</span>
+      <span className="text-center text-xs sm:text-sm font-medium text-primary">{author}</span>
     </motion.div>
   );
 }
@@ -82,8 +82,8 @@ export function ShuffleCards({ testimonials }: { testimonials: ConsultantTestimo
   }, []);
 
   return (
-    <div className="grid place-content-center overflow-hidden px-8 py-12 text-text-primary min-h-[500px] h-full w-full">
-      <div className="relative -ml-[100px] h-[450px] w-[350px] md:-ml-[175px]">
+    <div className="grid place-content-center overflow-hidden px-4 sm:px-8 py-8 sm:py-12 text-text-primary min-h-[450px] sm:min-h-[500px] h-full w-full">
+      <div className="relative -ml-[60px] h-[400px] w-[280px] sm:-ml-[100px] sm:h-[450px] sm:w-[350px] md:-ml-[175px]"></div>
         {testimonials.slice(0, 3).map((testimonial, index) => (
           <TestimonialCard
             key={testimonial.id}
