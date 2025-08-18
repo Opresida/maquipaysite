@@ -1007,44 +1007,6 @@ Enviar Cadastro
 
 
 
-<style>
-
-.slider::-webkit-slider-thumb {
-
-appearance: none;
-
-height: 20px;
-
-width: 20px;
-
-border-radius: 50%;
-
-background: linear-gradient(to right, #E5007E, #6D28D9);
-
-cursor: pointer;
-
-}
-
-
-
-.slider::-moz-range-thumb {
-
-height: 20px;
-
-width: 20px;
-
-border-radius: 50%;
-
-background: linear-gradient(to right, #E5007E, #6D28D9);
-
-cursor: pointer;
-
-border: none;
-
-}
-
-</style>
-
 </div>
 
 );
