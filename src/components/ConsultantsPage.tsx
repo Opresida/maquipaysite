@@ -189,7 +189,7 @@ className="rounded-xl shadow-2xl max-w-full h-auto transform hover:rotate-2 tran
 
 />
 
-<div className="absolute -inset-4 bg-gradient-primary/20 rounded-xl blur-xl opacity-50"></div>
+<div className="absolute -inset-4 bg-gradient-primary/10 rounded-xl blur-2xl opacity-30"></div>
 
 </div>
 
