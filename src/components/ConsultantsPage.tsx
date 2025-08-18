@@ -1007,7 +1007,7 @@ Enviar Cadastro
 
 
 
-<style jsx>{`
+<style>
 
 .slider::-webkit-slider-thumb {
 
@@ -1043,7 +1043,7 @@ border: none;
 
 }
 
-`}</style>
+</style>
 
 </div>
 
