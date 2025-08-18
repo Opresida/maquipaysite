@@ -83,7 +83,7 @@ export function ShuffleCards({ testimonials }: { testimonials: ConsultantTestimo
 
   return (
     <div className="grid place-content-center overflow-hidden px-4 sm:px-8 py-8 sm:py-12 text-text-primary min-h-[450px] sm:min-h-[500px] h-full w-full">
-      <div className="relative -ml-[60px] h-[400px] w-[280px] sm:-ml-[100px] sm:h-[450px] sm:w-[350px] md:-ml-[175px]"></div>
+      <div className="relative -ml-[60px] h-[400px] w-[280px] sm:-ml-[100px] sm:h-[450px] sm:w-[350px] md:-ml-[175px]">
         {testimonials.slice(0, 3).map((testimonial, index) => (
           <TestimonialCard
             key={testimonial.id}
