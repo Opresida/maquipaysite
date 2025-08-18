@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
 
-import { Users, Calculator, TrendingUp, Target, Star, ArrowRight, CheckCircle } from 'lucide-react';
+import { Users, Calculator, TrendingUp, Target, Star, ArrowRight, CheckCircle, Phone, Mail, Building, MessageSquare } from 'lucide-react';
 import { GlowingEffect } from "./ui/glowing-effect";
 
 
