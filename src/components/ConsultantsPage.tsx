@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { Users, Calculator, TrendingUp, Target, Star, ArrowRight, CheckCircle, Phone, Mail, Building, MessageSquare } from 'lucide-react';
 import { GlowingEffect } from "./ui/glowing-effect";
-import ShuffleCards from "./ui/shuffle-cards"; // Assuming ShuffleCards is in ui/shuffle-cards.tsx
+import { ShuffleCards } from "./ui/testimonial-cards";
 
 
 const ConsultantsPage = () => {
