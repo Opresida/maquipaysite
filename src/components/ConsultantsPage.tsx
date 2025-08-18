@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
 
-import { Users, Calculator, TrendingUp, Target, CheckCircle, Star, Phone, Mail, Building, MessageSquare, ArrowRight } from 'lucide-react';
+import { Users, Calculator, TrendingUp, Target, Star, ArrowRight, CheckCircle } from 'lucide-react';
+import { GlowingEffect } from "./ui/glowing-effect";
 
 
 
@@ -178,11 +179,11 @@ className="relative flex items-center justify-center"
 
 <div className="relative">
 
-<img 
+<img
 
-src="https://i.imgur.com/U4QLqcn.png" 
+src="https://i.imgur.com/U4QLqcn.png"
 
-alt="Maquininha MaquiPAY" 
+alt="Maquininha MaquiPAY"
 
 className="rounded-xl shadow-2xl max-w-full h-auto transform hover:rotate-2 transition-transform duration-500"
 
@@ -256,7 +257,7 @@ description: "Você se cadastra como revendedor (Pessoa Jurídica)."
 
 icon: Users,
 
-title: "2. Indicação", 
+title: "2. Indicação",
 
 description: "Você indica a MaquiPAY para seus clientes."
 
@@ -286,9 +287,27 @@ whileInView="visible"
 
 viewport={{ once: true }}
 
-className="bg-background p-8 rounded-xl border border-secondary/20 text-center hover:border-primary/50 transition-all duration-300"
+className="relative bg-background p-8 rounded-xl border border-secondary/20 text-center hover:border-primary/50 transition-all duration-300"
 
 >
+
+<GlowingEffect
+
+disabled={false}
+
+className="rounded-xl"
+
+proximity={80}
+
+spread={20}
+
+inactiveZone={0.5}
+
+borderWidth={1}
+
+/>
+
+<div className="relative z-10">
 
 <div className="flex justify-center mb-4">
 
@@ -303,6 +322,8 @@ className="bg-background p-8 rounded-xl border border-secondary/20 text-center h
 <h3 className="text-xl font-bold mb-3">{step.title}</h3>
 
 <p className="text-text-secondary">{step.description}</p>
+
+</div>
 
 </motion.div>
 
