@@ -11,6 +11,7 @@ import { useState } from 'react';
               MaquiPAY
             </div>
             <nav className="hidden md:flex items-center space-x-8">
+              <a href="/" className="text-text-secondary hover:text-text-primary transition-colors">Início</a>
               <a href="#solutions" className="text-text-secondary hover:text-text-primary transition-colors">Soluções</a>
               <a href="#benefits" className="text-text-secondary hover:text-text-primary transition-colors">Vantagens</a>
               <a href="#testimonials" className="text-text-secondary hover:text-text-primary transition-colors">Depoimentos</a>
@@ -31,6 +32,7 @@ import { useState } from 'react';
           {isOpen && (
             <div className="md:hidden bg-surface">
               <nav className="flex flex-col items-center space-y-4 py-4">
+                <a href="/" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary transition-colors">Início</a>
                 <a href="#solutions" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary transition-colors">Soluções</a>
                 <a href="#benefits" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary transition-colors">Vantagens</a>
                 <a href="#testimonials" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary transition-colors">Depoimentos</a>
