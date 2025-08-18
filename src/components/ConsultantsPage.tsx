@@ -715,9 +715,27 @@ whileInView="visible"
 
 viewport={{ once: true }}
 
-className="bg-background p-6 rounded-xl border border-secondary/20 text-center hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2"
+className="relative bg-background p-6 rounded-xl border border-secondary/20 text-center transition-all duration-300 transform hover:-translate-y-2"
 
 >
+
+<GlowingEffect
+
+disabled={false}
+
+className="rounded-xl"
+
+proximity={80}
+
+spread={20}
+
+inactiveZone={0.5}
+
+borderWidth={1}
+
+/>
+
+<div className="relative z-10">
 
 <div className={`w-16 h-16 bg-gradient-to-r ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
 
@@ -730,6 +748,8 @@ className="bg-background p-6 rounded-xl border border-secondary/20 text-center h
 <p className="text-2xl font-bold text-primary mb-2">{tier.commission}</p>
 
 <p className="text-sm text-text-secondary">Faturamento: {tier.target}</p>
+
+</div>
 
 </motion.div>
 
