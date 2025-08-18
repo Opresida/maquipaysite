@@ -15,7 +15,6 @@ export function TestimonialCard({
   handleShuffle, 
   testimonial, 
   position, 
-  id, 
   author, 
   avatar 
 }: ConsultantTestimonial & { 
