@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { Users, Calculator, TrendingUp, Target, Star, ArrowRight, CheckCircle, Phone, Mail, Building, MessageSquare } from 'lucide-react';
 import { GlowingEffect } from "./ui/glowing-effect";
-
+import ShuffleCards from "./ui/shuffle-cards"; // Assuming ShuffleCards is in ui/shuffle-cards.tsx
 
 
 const ConsultantsPage = () => {
@@ -27,6 +27,46 @@ mensagem: ''
 
 });
 
+
+// Depoimentos de consultores
+const consultantTestimonials = [
+{
+id: 1,
+testimonial: "Em 6 meses como consultor MaquiPAY, consegui uma renda extra de R$ 8.000 mensais. Hoje sustento minha família com essa parceria incrível!",
+author: "Ricardo Santos - Consultor Diamante",
+avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+},
+{
+id: 2,
+testimonial: "Deixei meu emprego CLT e hoje ganho 3x mais como consultora. A MaquiPAY mudou completamente minha vida financeira!",
+author: "Marina Costa - Consultora Ouro",
+avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+},
+{
+id: 3,
+testimonial: "Comecei do zero e hoje tenho uma carteira de 50 clientes ativos. O suporte da MaquiPAY é excepcional, sempre me ajudando a crescer!",
+author: "João Silva - Consultor Prata",
+avatar: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+},
+{
+id: 4,
+testimonial: "A liberdade de trabalhar de onde quiser e ainda ter uma renda recorrente é incrível. Recomendo a todos empreendedores!",
+author: "Ana Paula - Consultora Inicial",
+avatar: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+},
+{
+id: 5,
+testimonial: "Em 1 ano, construí um negócio sólido e hoje ganho mais de R$ 15.000 por mês. A MaquiPAY é uma oportunidade real!",
+author: "Carlos Mendes - Consultor Diamante",
+avatar: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+},
+{
+id: 6,
+testimonial: "Consegui comprar minha casa própria graças às comissões da MaquiPAY. É uma parceria que realmente vale a pena!",
+author: "Fernanda Lima - Consultora Ouro",
+avatar: "https://images.pexels.com/photos/2709388/pexels-photo-2709388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+}
+];
 
 
 // Cálculo da comissão
@@ -603,9 +643,63 @@ R$ {comissaoEstimada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
 
 
 
-{/* Plano de Carreira */}
-
+{/* Depoimentos de Consultores */}
 <section className="py-20 sm:py-28 bg-surface/50">
+  <div className="container mx-auto px-6">
+    <motion.div
+      variants={fadeUpVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        Consultores que Mudaram de <span className="bg-gradient-primary text-transparent bg-clip-text">Vida</span>
+      </h2>
+      <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+        Conheça histórias reais de pessoas que transformaram suas vidas financeiras com a MaquiPAY
+      </p>
+      <p className="text-sm text-primary mt-4 font-medium">
+        👆 Arraste os cards para ver mais depoimentos
+      </p>
+    </motion.div>
+
+    <motion.div
+      variants={fadeUpVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="flex justify-center"
+    >
+      <ShuffleCards testimonials={consultantTestimonials} />
+    </motion.div>
+
+    {/* Estatísticas dos Consultores */}
+    <motion.div
+      variants={fadeUpVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+    >
+      <div className="text-center bg-background p-6 rounded-xl border border-primary/20">
+        <div className="text-3xl font-bold text-primary mb-2">500+</div>
+        <div className="text-text-secondary">Consultores Ativos</div>
+      </div>
+      <div className="text-center bg-background p-6 rounded-xl border border-primary/20">
+        <div className="text-3xl font-bold text-primary mb-2">R$ 12M+</div>
+        <div className="text-text-secondary">Pagos em Comissões</div>
+      </div>
+      <div className="text-center bg-background p-6 rounded-xl border border-primary/20">
+        <div className="text-3xl font-bold text-primary mb-2">98%</div>
+        <div className="text-text-secondary">Taxa de Satisfação</div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+  {/* Plano de Carreira */}
+  <section className="py-20 sm:py-28 bg-background">
 
 <div className="container mx-auto px-6">
 
