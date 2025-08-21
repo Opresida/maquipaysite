@@ -12,7 +12,7 @@ import { GlowingEffect } from "./ui/glowing-effect";
 import { ShuffleCards } from "./ui/testimonial-cards";
 
 // --- ESTRUTURA DE DADOS COM TODAS AS TAXAS EXTRAÍDAS DAS SUAS TABELAS ---
-const taxasMaquipay = {
+const taxasMaquipay: Record<string, Record<string, number>> = {
   visa: { "Débito": 0.5, "Crédito à vista": 0.75, "Crédito 2X": 1.0, "Crédito 3X": 1.25, "Crédito 4X": 1.5, "Crédito 5X": 1.75, "Crédito 6X": 2.0, "Crédito 7X": 2.25, "Crédito 8X": 2.5, "Crédito 9X": 2.75, "Crédito 10X": 3.0, "Crédito 11X": 3.25, "Crédito 12X": 3.5 },
   mastercard: { "Débito": 0.5, "Crédito à vista": 0.75, "Crédito 2X": 1.0, "Crédito 3X": 1.25, "Crédito 4X": 1.5, "Crédito 5X": 1.75, "Crédito 6X": 2.0, "Crédito 7X": 2.25, "Crédito 8X": 2.5, "Crédito 9X": 2.75, "Crédito 10X": 3.0, "Crédito 11X": 3.25, "Crédito 12X": 3.5 },
   elo: { "Débito": 0.5, "Crédito à vista": 0.75, "Crédito 2X": 1.0, "Crédito 3X": 1.25, "Crédito 4X": 1.5, "Crédito 5X": 1.75, "Crédito 6X": 2.0, "Crédito 7X": 2.25, "Crédito 8X": 2.5, "Crédito 9X": 2.75, "Crédito 10X": 3.0, "Crédito 11X": 3.25, "Crédito 12X": 3.5 },
@@ -50,7 +50,7 @@ const ConsultantsPage = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.4, 0.25, 1] } },
   };
 
-  const handleBandeiraChange = (value) => {
+  const handleBandeiraChange = (value: string) => {
     setBandeira(value);
     if (!taxasMaquipay[value][tipoPagamento]) {
       setTipoPagamento(Object.keys(taxasMaquipay[value])[0]);
