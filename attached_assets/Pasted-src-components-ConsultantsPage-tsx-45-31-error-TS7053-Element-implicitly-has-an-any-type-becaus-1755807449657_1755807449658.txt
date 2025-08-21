@@ -1,0 +1,29 @@
+src/components/ConsultantsPage.tsx:45:31 - error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ visa: { Débito: number; "Cr\u00E9dito \u00E0 vista": number; "Cr\u00E9dito 2X": number; "Cr\u00E9dito 3X": number; "Cr\u00E9dito 4X": number; "Cr\u00E9dito 5X": number; "Cr\u00E9dito 6X": number; "Cr\u00E9dito 7X": number; "Cr\u00E9dito 8X": number; "Cr\u00E9dito 9X": number; "Cr\u00E9dito 10X": number; "Cr\u00E9d...'.
+  No index signature with a parameter of type 'string' was found on type '{ visa: { Débito: number; "Cr\u00E9dito \u00E0 vista": number; "Cr\u00E9dito 2X": number; "Cr\u00E9dito 3X": number; "Cr\u00E9dito 4X": number; "Cr\u00E9dito 5X": number; "Cr\u00E9dito 6X": number; "Cr\u00E9dito 7X": number; "Cr\u00E9dito 8X": number; "Cr\u00E9dito 9X": number; "Cr\u00E9dito 10X": number; "Cr\u00E9d...'.
+
+45   const comissaoMaquipayPct = taxasMaquipay[bandeira]?.[tipoPagamento] || 0;
+                                 ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/ConsultantsPage.tsx:53:33 - error TS7006: Parameter 'value' implicitly has an 'any' type.
+
+53   const handleBandeiraChange = (value) => {
+                                   ~~~~~
+
+src/components/ConsultantsPage.tsx:55:10 - error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ visa: { Débito: number; "Cr\u00E9dito \u00E0 vista": number; "Cr\u00E9dito 2X": number; "Cr\u00E9dito 3X": number; "Cr\u00E9dito 4X": number; "Cr\u00E9dito 5X": number; "Cr\u00E9dito 6X": number; "Cr\u00E9dito 7X": number; "Cr\u00E9dito 8X": number; "Cr\u00E9dito 9X": number; "Cr\u00E9dito 10X": number; "Cr\u00E9d...'.
+
+55     if (!taxasMaquipay[value][tipoPagamento]) {
+            ~~~~~~~~~~~~~~~~~~~~
+
+src/components/ConsultantsPage.tsx:56:36 - error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ visa: { Débito: number; "Cr\u00E9dito \u00E0 vista": number; "Cr\u00E9dito 2X": number; "Cr\u00E9dito 3X": number; "Cr\u00E9dito 4X": number; "Cr\u00E9dito 5X": number; "Cr\u00E9dito 6X": number; "Cr\u00E9dito 7X": number; "Cr\u00E9dito 8X": number; "Cr\u00E9dito 9X": number; "Cr\u00E9dito 10X": number; "Cr\u00E9d...'.
+
+56       setTipoPagamento(Object.keys(taxasMaquipay[value])[0]);
+                                      ~~~~~~~~~~~~~~~~~~~~
+
+src/components/ConsultantsPage.tsx:169:34 - error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ visa: { Débito: number; "Cr\u00E9dito \u00E0 vista": number; "Cr\u00E9dito 2X": number; "Cr\u00E9dito 3X": number; "Cr\u00E9dito 4X": number; "Cr\u00E9dito 5X": number; "Cr\u00E9dito 6X": number; "Cr\u00E9dito 7X": number; "Cr\u00E9dito 8X": number; "Cr\u00E9dito 9X": number; "Cr\u00E9dito 10X": number; "Cr\u00E9d...'.
+  No index signature with a parameter of type 'string' was found on type '{ visa: { Débito: number; "Cr\u00E9dito \u00E0 vista": number; "Cr\u00E9dito 2X": number; "Cr\u00E9dito 3X": number; "Cr\u00E9dito 4X": number; "Cr\u00E9dito 5X": number; "Cr\u00E9dito 6X": number; "Cr\u00E9dito 7X": number; "Cr\u00E9dito 8X": number; "Cr\u00E9dito 9X": number; "Cr\u00E9dito 10X": number; "Cr\u00E9d...'.
+
+169                     {Object.keys(taxasMaquipay[bandeira] || {}).map(t => <SelectItem key={t} value={t}>{t}</SelectItem>)}
+                                     ~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Found 5 errors in the same file, starting at: src/components/ConsultantsPage.tsx:45
